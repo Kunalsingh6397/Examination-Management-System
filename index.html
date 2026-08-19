@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam Copy Checking System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-file-pen"></i>
+        ExamCheck
+    </div>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#checking">Copy Checking</a>
+        <a href="#records">Records</a>
+    </nav>
+
+    <button id="themeBtn" class="theme-btn">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+</header>
+
+
+<main>
+
+<section id="dashboard" class="hero">
+
+    <div>
+        <span class="badge">EXAMINATION MANAGEMENT</span>
+
+        <h1>
+            Professional Exam
+            <span>Copy Checking System</span>
+        </h1>
+
+        <p>
+            Check answer sheets, enter question-wise marks,
+            calculate results and manage examination records
+            from one professional dashboard.
+        </p>
+
+        <a href="#checking" class="primary-btn">
+            Start Checking
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <div class="hero-card">
+
+        <div class="document-icon">
+            <i class="fa-solid fa-file-circle-check"></i>
+        </div>
+
+        <h3>Smart Evaluation</h3>
+
+        <p>
+            Fast, accurate and organized examination
+            evaluation system.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="stats">
+
+    <div class="stat-card">
+        <div class="stat-icon blue">
+            <i class="fa-solid fa-users"></i>
+        </div>
+
+        <div>
+            <h2 id="totalStudents">0</h2>
+            <p>Total Students</p>
+        </div>
+    </div>
+
+
+    <div class="stat-card">
+        <div class="stat-icon green">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div>
+            <h2 id="passedStudents">0</h2>
+            <p>Passed</p>
+        </div>
+    </div>
+
+
+    <div class="stat-card">
+        <div class="stat-icon red">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+
+        <div>
+            <h2 id="failedStudents">0</h2>
+            <p>Failed</p>
+        </div>
+    </div>
+
+
+    <div class="stat-card">
+        <div class="stat-icon purple">
+            <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <div>
+            <h2 id="averageMarks">0%</h2>
+            <p>Average Score</p>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="checking" class="section">
+
+    <div class="section-heading">
+        <div>
+            <span class="small-title">EVALUATION PANEL</span>
+            <h2>Check Examination Copy</h2>
+        </div>
+
+        <div class="exam-status">
+            <span></span>
+            Checking Mode Active
+        </div>
+    </div>
+
+
+    <div class="checking-grid">
+
+        <div class="form-card">
+
+            <h3>
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Information
+            </h3>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Student Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name">
+                </div>
+
+                <div class="input-group">
+                    <label>Roll Number</label>
+                    <input
+                        type="text"
+                        id="rollNumber"
+                        placeholder="Enter roll number">
+                </div>
+
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Enter subject">
+                </div>
+
+                <div class="input-group">
+                    <label>Exam</label>
+
+                    <select id="examType">
+
+                        <option value="">
+                            Select Exam
+                        </option>
+
+                        <option>Mid Semester</option>
+                        <option>End Semester</option>
+                        <option>Internal Examination</option>
+                        <option>Final Examination</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <h3 class="question-title">
+                <i class="fa-solid fa-list-check"></i>
+                Question-wise Evaluation
+            </h3>
+
+
+            <div id="questions">
+
+                <div class="question-row">
+
+                    <div class="question-number">
+                        Q1
+                    </div>
+
+                    <input
+                        type="number"
+                        class="marks"
+                        min="0"
+                        max="10"
+                        placeholder="Marks">
+
+                    <span>/ 10</span>
+
+                </div>
+
+
+                <div class="question-row">
+
+                    <div class="question-number">
+                        Q2
+                    </div>
+
+                    <input
+                        type="number"
+                        class="marks"
+                        min="0"
+                        max="10"
+                        placeholder="Marks">
+
+                    <span>/ 10</span>
+
+                </div>
+
+
+                <div class="question-row">
+
+                    <div class="question-number">
+                        Q3
+                    </div>
+
+                    <input
+                        type="number"
+                        class="marks"
+                        min="0"
+                        max="10"
+                        placeholder="Marks">
+
+                    <span>/ 10</span>
+
+                </div>
+
+
+                <div class="question-row">
+
+                    <div class="question-number">
+                        Q4
+                    </div>
+
+                    <input
+                        type="number"
+                        class="marks"
+                        min="0"
+                        max="10"
+                        placeholder="Marks">
+
+                    <span>/ 10</span>
+
+                </div>
+
+
+                <div class="question-row">
+
+                    <div class="question-number">
+                        Q5
+                    </div>
+
+                    <input
+                        type="number"
+                        class="marks"
+                        min="0"
+                        max="10"
+                        placeholder="Marks">
+
+                    <span>/ 10</span>
+
+                </div>
+
+            </div>
+
+
+            <button class="add-question" id="addQuestion">
+                <i class="fa-solid fa-plus"></i>
+                Add Question
+            </button>
+
+
+            <div class="input-group remarks">
+
+                <label>Examiner Remarks</label>
+
+                <textarea
+                    id="remarks"
+                    placeholder="Enter examiner remarks..."></textarea>
+
+            </div>
+
+
+            <button id="saveResult" class="save-btn">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Evaluation
+
+            </button>
+
+        </div>
+
+
+        <div class="result-card">
+
+            <div class="result-header">
+
+                <div>
+                    <span>RESULT PREVIEW</span>
+                    <h3>Evaluation Result</h3>
+                </div>
+
+                <i class="fa-solid fa-award"></i>
+
+            </div>
+
+
+            <div class="score-circle">
+
+                <div>
+
+                    <strong id="percentage">
+                        0%
+                    </strong>
+
+                    <small>
+                        Score
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-info">
+
+                <div>
+                    <span>Total Marks</span>
+                    <strong id="totalMarks">
+                        0 / 50
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Grade</span>
+                    <strong id="grade">
+                        -
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Status</span>
+                    <strong id="status">
+                        -
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="result-message" id="resultMessage">
+                Enter marks to calculate result.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="records" class="section records-section">
+
+    <div class="section-heading">
+
+        <div>
+            <span class="small-title">
+                EVALUATION HISTORY
+            </span>
+
+            <h2>
+                Student Records
+            </h2>
+        </div>
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-search"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search student...">
+
+        </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Student</th>
+                    <th>Roll No.</th>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="recordsTable">
+
+            </tbody>
+
+        </table>
+
+        <div id="emptyMessage" class="empty">
+            <i class="fa-solid fa-folder-open"></i>
+            <p>No evaluation records found.</p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        <strong>
+            <i class="fa-solid fa-file-pen"></i>
+            ExamCheck
+        </strong>
+
+        <p>
+            Professional Examination Copy Checking System
+        </p>
+    </div>
+
+    <p>
+        © 2026 ExamCheck. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<div id="toast" class="toast">
+    Evaluation saved successfully!
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
